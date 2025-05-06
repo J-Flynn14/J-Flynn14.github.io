@@ -1,9 +1,9 @@
-// PostCSS in ESM format
+// PostCSS config (ESM syntax)
 const config = {
   plugins: {
-    // Order matters: Tailwind first, then Autoprefixer
-    tailwindcss: {},
-    autoprefixer: {},
+    // NEW: use the separate PostCSS plugin for v4
+    '@tailwindcss/postcss': {},     // <— fixes the build error
+    autoprefixer: {},               // vendor prefixes
   },
 };
 

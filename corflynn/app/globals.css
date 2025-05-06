@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";    /* loads base, components & utilities */ /* :contentReference[oaicite:1]{index=1} */
 
-/* 1️⃣  Custom font -------------------------------------------------------------------- */
 @font-face {
   font-family: 'Hero';
   src: url('/fonts/Hero-Regular.woff2') format('woff2');
@@ -10,7 +7,6 @@
   font-display: swap;
 }
 
-/* 2️⃣  Global tweaks ------------------------------------------------------------------ */
 html { scroll-behavior: smooth; }
 
 body {
@@ -18,6 +14,5 @@ body {
   font-family: 'Hero', sans-serif;
 }
 
-/* 3️⃣  Utility class for scroll-reveal (used as fallback if JS disabled) ------------- */
 .reveal { opacity: 0; transform: translateY(40px); }
 
