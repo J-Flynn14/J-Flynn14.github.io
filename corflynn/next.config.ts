@@ -1,14 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output:export tells Next.js 15 to statically export into out/
+  // Static export -- puts HTML/CSS/JS into ./out
   output: 'export',
 
-  // You can leave trailingSlash if you like .html URLs, but it's optional:
+  // Keeps every route as …/index.html  →  works nicely with GitHub Pages
   trailingSlash: true,
 
-  // Remove basePath and assetPrefix entirely:
-  // assetPrefix: '',
-  // basePath: '',
+  // Required when you use output: 'export' and *don’t* want Next/Image to optimise
+  images: { unoptimized: true },
+
+  // ❌ DELETE the two lines below in the old file:
+  // basePath: '/corflynn',
+  // assetPrefix: '/corflynn/',
 };
 
-module.exports = nextConfig;
+export default nextConfig;
